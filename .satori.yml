@@ -1,0 +1,12 @@
+settings:
+  logOnFail: slack
+
+install:
+  - [pip install ruff bandit]
+
+tests:
+  assertReturnCode: 0
+  ruff:
+    - [ruff check src/]
+  bandit:
+    - [bandit -r src/]
